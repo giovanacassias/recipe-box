@@ -3,6 +3,7 @@
 <p>Receita escolhida: {{ recipe().name }}</p>
 <p>Descrição: {{ recipe().description }}</p>
 <p>Quantidade: {{ servings() }} </p>
+<pre>{{ adjustedIngredients() | json }}</pre>
 
 <button (click)="capreseSalad()">Salada</button>
 <button (click)="spaghettiCarbonara()">Spaghetti</button>
