@@ -13,6 +13,7 @@ import { SPAGHETTI_CARBONARA, CAPRESE_SALAD } from './mock-recipes';
 export class App {
   protected readonly title = signal('My Recipe Box');
   protected readonly recipe = signal<RecipeModel>(CAPRESE_SALAD);
+  protected readonly servings = signal<number>(1);
 
   protected capreseSalad(): void {
     this.recipe.set(CAPRESE_SALAD);
@@ -20,5 +21,13 @@ export class App {
 
   protected spaghettiCarbonara(): void {
     this.recipe.set(SPAGHETTI_CARBONARA);
+  }
+
+  protected increment(): void {
+    this.servings.update((current) => current +1);
+  }
+
+  protected decrement(): void {
+    this.servings.update((current) => Math.max(1, current - 1));
   }
 }
