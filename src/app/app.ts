@@ -9,5 +9,4 @@ import { RecipeList } from './recipe-list/recipe-list';
   templateUrl: './app.html',
 })
 export class App {
-  protected readonly title = signal('My Recipe Box');
 }
