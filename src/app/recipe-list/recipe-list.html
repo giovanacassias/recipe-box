@@ -3,4 +3,10 @@
 <button (click)="capreseSalad()">Salada</button>
 <button (click)="spaghettiCarbonara()">Spaghetti</button>
 
+@if (recipe().isFavorite) {
+    <span>⭐ Receita Favorita</span>
+} @else {
+    <p> ❤️ Favoritar</p>
+}
+
 <app-recipe-detail [recipe]="recipe()" />
