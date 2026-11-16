@@ -1,9 +1,11 @@
-<img [src]="recipe().imgUrl" [alt]="recipe().name" width="200"/>
+<div class="recipe-card">
+  <img [src]="recipe().imgUrl" [alt]="recipe().name" width="200" />
 
-<p>Receita escolhida: {{ recipe().name }}</p>
-<p>Descrição: {{ recipe().description }}</p>
-<p>Quantidade: {{ servings() }} </p>
-<pre>{{ adjustedIngredients() | json }}</pre>
+  <p class="title">Receita escolhida: {{ recipe().name }}</p>
+  <p>Descrição: {{ recipe().description }}</p>
+  <p>Quantidade: {{ servings() }}</p>
+  <pre>{{ adjustedIngredients() | json }}</pre>
 
-<button (click)="increment()">+</button>
-<button (click)="decrement()">-</button>
+  <button (click)="increment()">+</button>
+  <button (click)="decrement()">-</button>
+</div>
