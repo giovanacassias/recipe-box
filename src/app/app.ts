@@ -1,5 +1,8 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { RecipeModel } from './models';
+import { SPAGHETTI_CARBONARA, CAPRESE_SALAD } from './mock-recipes';
+
 
 @Component({
   imports: [RouterOutlet],
@@ -9,12 +12,13 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('My Recipe Box');
+  protected readonly recipe = signal<RecipeModel>(CAPRESE_SALAD);
 
-  protected login(): void {
-    console.log("Login realizado com sucesso!");
+  protected capreseSalad(): void {
+    this.recipe.set(CAPRESE_SALAD);
   }
 
-  protected logout(): void {
-    console.log("Logout realizado com sucesso!");
+  protected spaghettiCarbonara(): void {
+    this.recipe.set(SPAGHETTI_CARBONARA);
   }
 }

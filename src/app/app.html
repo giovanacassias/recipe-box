@@ -1,4 +1,7 @@
 <h1>{{ title() }}</h1>
 
-<button (click)="login()">Login</button>
-<button (click)="logout()">Logout</button>
+<p>Receita escolhida: {{ activeRecipe().name }}</p>
+<p>Descrição: {{ activeRecipe().description }}</p>
+
+<button (click)="capreseSalad()">Salada</button>
+<button (click)="spaghettiCarbonara()">Spaghetti</button>
