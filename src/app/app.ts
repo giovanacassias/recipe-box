@@ -9,4 +9,12 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('My Recipe Box');
+
+  protected login(): void {
+    console.log("Login realizado com sucesso!");
+  }
+
+  protected logout(): void {
+    console.log("Logout realizado com sucesso!");
+  }
 }
